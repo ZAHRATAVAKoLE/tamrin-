@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,78 +11,54 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             Random r = new Random();
-            int user_score=0, computer_score=0 , index;
+            int user_score = 0, computer_score = 0, index;
             string computer_choice, user_choice;
-            string[] options = new string[3];
-            options[0] = "rock";
-            options[1] = " paper";
-            options[2] = "scissor";
-            for (int i = 0; i < 5; i++) 
+            string[] options = new string[2];
+            
+            options[0] = "on";
+            options[1] = "back";
+
+            while (true)
             {
-                index = r.Next(0,3);
+                index = r.Next(0, 2);
                 computer_choice = options[index];
-                user_choice =Console.ReadLine();
+                user_choice = Console.ReadLine();
                 Console.WriteLine(computer_choice);
-                if (computer_choice == "paper" && user_choice==" rock")
+                if (computer_choice == "on" && user_choice == "back")
                 {
                     computer_score++;
                 }
 
-                else if( computer_choice == "scissor" && user_choice== "rock")
+                else if (computer_choice == "back" && user_choice == "on")
                 {
-                    user_score++;
-                }
-                else if( computer_choice == "scissor" && user_choice=="scissor")
-                {
-                    computer_score++;
-
-                    user_score++;
-                }
-                else if( computer_choice == " rock" && user_choice==" rock")
-                {
-                    computer_score++;
-
-                    user_score++;
-                }
-                else if( computer_choice == " paper" && user_choice==" paper")
-                {
-                    computer_score++;
-
                     user_score++;
                 }
 
-                if (computer_choice == "rock" && user_choice == " paper")
-                {
-                    user_score++;
+                if (computer_score ==5 || user_score==5)
+                    
+                { 
+                    break;
                 }
-                else if (computer_choice == "rock" && user_choice == "scissor")
-                {
-                    computer_score++;
-                }
-                else if (computer_choice == "scissor" && user_choice == "paper")
-                {
-                    computer_score++;
-                }
-                else if (computer_choice == "paper" && user_choice == "scissor")
-                {
-                    user_score++;
-                }
-                
+
             }
-            if (computer_score < user_score)
+            if (computer_score == 5)
+            {
+                Console.WriteLine("COMPUTER WIN ");
+               
+            }
+            else if (user_score == 5)
             {
                 Console.WriteLine(" YOU WIN");
-            }
-            if (computer_score > user_score)
-            {
-                Console.WriteLine(" COMPUTER WIN");
+                
             }
 
-            else
-            {
-                Console.WriteLine(" DRAW");
-            }
+            
+            
+       
+              
         }
 
     }
 }
+
+          
