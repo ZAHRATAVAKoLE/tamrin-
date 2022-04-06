@@ -61,7 +61,7 @@ namespace ConsoleApplication1
                 Console.WriteLine(" YOU WIN");
                 
             }
-            else if (computer_score2 == 5)
+            else if (computer2_score== 5)
             {
                 Console.WriteLine("COMPUTER2 WIN ");
             }  
