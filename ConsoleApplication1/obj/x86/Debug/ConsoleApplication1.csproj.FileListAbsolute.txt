@@ -1,0 +1,4 @@
+D:\koakoa\play\palam\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\koakoa\play\palam\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\koakoa\play\palam\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+D:\koakoa\play\palam\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
